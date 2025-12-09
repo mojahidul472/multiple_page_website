@@ -67,5 +67,36 @@ header{
     align-items: center;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 10px;
+}
+
+/* main section code start */
+main{
+    background-color: #2d236a;
+    padding-top: 20px;
+}
+#main-section{
+    width: 1400px;
+    margin: auto;
+    padding: 50px 0;
+}
+.latest-video-parent{
+    display: flex;
+    justify-content: space-between;
+}
+.latest-video-text{
+    font-size: 25px;
+    color: #04AA6D;
+    font-weight: bold;
+}
+.latest-pages{
+    color: #04AA6D;
+}
+.latest-pages span{
+    color: black;
+    background-color: antiquewhite;
+    padding: 5px;
+    border: 1px solid #8080805b;
+    border-radius: 4px;
+    margin: 0 10px;
+    cursor: pointer;
 }
