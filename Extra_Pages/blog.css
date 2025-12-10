@@ -2,6 +2,48 @@
     margin: 0;
     padding: 0;
 }
+
+/* nav code start */
+header{
+    background-color: #1a1244;
+    border-bottom: 4px solid #401e63;
+    position: sticky;
+    top: 0;
+}
+nav{
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin: 10px 5px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: 0.5s;
+}
+nav div{
+    color: white;
+    font-size: 20px;
+}
+nav ul li a:hover{
+    background-color: black;
+    color: red;
+    border-radius: 5px;
+
+}
+
+/* nav code finish */
 #article-container{
     width: 1400px;
     margin: 0 auto;
@@ -50,4 +92,102 @@
     text-decoration: none;
     display: inline-block;
     margin-top: 10px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN START
+================================ */
+
+/* Large Tablet (max-width: 1400px) */
+@media (max-width:1400px){
+    nav, 
+    #seconde-section, 
+    #article-container {
+        width: 95%;
+    }
+}
+
+/* Tablet (max-width: 992px) */
+@media (max-width:992px){
+
+    nav ul li a{
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    .single-items-parent{
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+    }
+
+    .blog-parent{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width:768px){
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li{
+        margin: 5px;
+    }
+
+    .latest-video-parent{
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .single-items-parent{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .blog-parent{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .single-img-div{
+        height: 250px;
+    }
+
+    #Previous-next-parent{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width:480px){
+
+    nav div h2{
+        font-size: 18px;
+    }
+
+    nav ul li a{
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    .single-text{
+        padding: 15px;
+    }
+
+    .article-title{
+        font-size: 22px;
+    }
 }

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+/* nav code start */
 header{
     background-color: #1a1244;
     border-bottom: 4px solid #401e63;
@@ -40,46 +41,8 @@ nav ul li a:hover{
     border-radius: 5px;
 
 }
+/* nav code finish */
 
-/* hero area code start */
-#first-section{
-    width: 1400px;
-    margin: auto;
-}
-.hero-section{
-    background-image: url("asset/website\ banner.jpg");
-    padding: 200px 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.search-box-icon-parent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.search-box-icon-parent input{
-    width: 500px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: 20px;
-    padding: 5px 20px;
-}
-.search-box-icon-parent i{
-    background-color: green;
-    color: red;
-    font-size: 25px;
-    height: 40px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-/* main section code start */
 main{
     background-color: #2d236a;
     padding-top: 20px;
@@ -170,165 +133,89 @@ main{
     background-color: #04AA6D;
 }
 
-/* footer section start */
-footer{
-    background-color: #5F1E69;
-    color: white;
-}
-#footer-container{
-    width: 1400PX;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    gap: 50PX;
-}
-.footer-firstItem h3{
-    font-size: 25px;
-    padding: 30px 0;
-    margin-top: 20px;
-}
-.footer-firstItem:first-child p{
-    margin-bottom: 50px;
-}
-.footer-secondItem h3 {
-    font-size: 25px;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-.footer-secondItem a{
-    text-decoration: none;
-    color: white;
-}
-.footer-secondItem p{
-    margin-bottom: 10px;
-}
 
-.footer-thirdItem div{
-    font-size: 25px;
-    padding: 30px 0;
-    margin-top: 20px;
-}
-.footer-thirdItem div a{
-    color: white;
-    text-decoration: none;
-    margin-right: 10px;
-    background-color: #1a1244;
-    padding: 10px;
-    border-radius: 5px;
-}
-.footer-thirdItem p{
-    margin-bottom: 10px;
-}
-.footer-thirdItem p:nth-child(3){
-    margin-bottom: 70px;
-}
+/* ========================================= */
+/*              RESPONSIVE DESIGN            */
+/* ========================================= */
 
-
-/* =============================== */
-/*       RESPONSIVE DESIGN         */
-/* =============================== */
-
-/* --- Large Tablet / Small Laptop --- */
+/* Large Screen Adjust */
 @media (max-width: 1400px) {
     nav,
-    #first-section,
-    #seconde-section,
-    #footer-container {
+    #seconde-section {
         width: 95%;
     }
 }
 
-/* --- Tablet --- */
+/* Tablet – Medium Devices */
 @media (max-width: 992px) {
 
+    /* Navbar */
     nav ul li a {
         font-size: 18px;
         padding: 8px 15px;
     }
 
+    /* Cards: 4 → 2 */
     .single-items-parent {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    #footer-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
 }
 
-/* --- Mobile --- */
+/* Mobile – Small Devices */
 @media (max-width: 768px) {
 
-    /* Nav */
+    /* Navbar column layout */
     nav {
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
+
     nav ul {
         flex-direction: column;
     }
+
     nav ul li {
-        margin: 5px 0;
+        margin: 6px 0;
     }
 
-    /* Hero Search */
-    .search-box-icon-parent {
-        flex-direction: row;
-        width: 100%;
-        padding: 0 20px;
-    }
-    .search-box-icon-parent input {
-        width: 70%;
-        font-size: 18px;
-    }
-    .search-box-icon-parent i {
-        width: 60px;
+    /* Latest video section center */
+    .latest-video-parent {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
     }
 
-    /* Single Items */
+    /* Cards: 1 per row */
     .single-items-parent {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    /* Previous Next */
+    /* Previous next */
     #Previous-next-parent {
         flex-direction: column;
-        text-align: center;
         gap: 20px;
-    }
-
-    /* Footer */
-    #footer-container {
-        grid-template-columns: repeat(1, 1fr);
         text-align: center;
-    }
-    .footer-thirdItem div a {
-        margin-bottom: 10px;
     }
 }
 
-/* --- Small Mobile --- */
+/* Extra small phones */
 @media (max-width: 480px) {
 
-    nav div,
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    .search-box-icon-parent input {
-        width: 100%;
-        font-size: 16px;
-    }
-
-    .latest-video-text {
+    nav div {
         font-size: 18px;
     }
 
-    .footer-firstItem h3,
-    .footer-secondItem h3,
-    .footer-thirdItem div {
+    nav ul li a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .latest-video-text h3 {
         font-size: 20px;
+    }
+
+    #Previous-next-parent h3 a {
+        padding: 8px 15px;
     }
 }
