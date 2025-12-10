@@ -5,6 +5,8 @@
 header{
     background-color: #1a1244;
     border-bottom: 4px solid #401e63;
+    position: sticky;
+    top: 0;
 }
 nav{
     width: 1400px;
